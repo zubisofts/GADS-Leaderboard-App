@@ -1,6 +1,7 @@
 package com.zubisofts.gadsleaderboard.activities;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.zubisofts.gadsleaderboard.R;
 import com.zubisofts.gadsleaderboard.viewmodel.LeaderBoardViewModel;
@@ -43,6 +45,13 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
         edtLastName = findViewById(R.id.edtLastName);
         edtEmail = findViewById(R.id.edtEmail);
         edtLink = findViewById(R.id.edtLink);
+
+        findViewById(R.id.btnClose).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         findViewById(R.id.btnSubmit).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +83,8 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setView(view)
                 .create().show();
+
+
     }
 
     private void showSuccessDialog() {
@@ -84,6 +95,12 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
         textView.setText("Submission Successful");
         new AlertDialog.Builder(this)
                 .setView(view)
+                .setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        finish();
+                    }
+                })
                 .create().show();
     }
 
@@ -104,8 +121,8 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
         }
 
         View view2 = LayoutInflater.from(this).inflate(R.layout.custom_confirm_dialog_view, null, false);
-        ImageView icon = view.findViewById(R.id.btnClose);
-        ImageView confirm = view.findViewById(R.id.btnConfirm);
+        ImageView icon = view2.findViewById(R.id.btnClose);
+        MaterialButton confirm = view2.findViewById(R.id.btnConfirm);
 
         AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setView(view2)
