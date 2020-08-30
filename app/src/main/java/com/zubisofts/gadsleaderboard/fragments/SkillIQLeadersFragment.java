@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +23,6 @@ import java.util.ArrayList;
 
 public class SkillIQLeadersFragment extends Fragment {
 
-    private LeaderBoardViewModel leaderBoardViewModel;
-
     public SkillIQLeadersFragment() {
         // Required empty public constructor
     }
@@ -40,7 +37,7 @@ public class SkillIQLeadersFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        leaderBoardViewModel = new ViewModelProvider.NewInstanceFactory().create(LeaderBoardViewModel.class);
+        LeaderBoardViewModel leaderBoardViewModel = new ViewModelProvider.NewInstanceFactory().create(LeaderBoardViewModel.class);
         leaderBoardViewModel.fetchLeaderBoardByIQ();
 
         RecyclerView leaderBordList = view.findViewById(R.id.leaderBordList);
@@ -49,14 +46,27 @@ public class SkillIQLeadersFragment extends Fragment {
         leaderBordList.setAdapter(leaderBoardListAdapter);
 
         LinearLayout progressLayout = view.findViewById(R.id.progress);
+        LinearLayout errorLayout = view.findViewById(R.id.errorLayout);
+        errorLayout.setVisibility(View.GONE);
+
+        errorLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                progressLayout.setVisibility(View.VISIBLE);
+                errorLayout.setVisibility(View.GONE);
+                leaderBoardViewModel.fetchLeaderBoardByIQ();
+            }
+        });
 
         leaderBoardViewModel.getLeaderBordIQ().observe(this, new Observer<Response>() {
             @Override
             public void onChanged(Response response) {
                 if (response.isError()) {
-                    Toast.makeText(getContext(), "An error occured", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getContext(), "An error occured", Toast.LENGTH_SHORT).show();
+                    errorLayout.setVisibility(View.VISIBLE);
                 } else {
                     leaderBoardListAdapter.setLeaderBoardList((ArrayList<?>) response.getLeaderBoards());
+                    errorLayout.setVisibility(View.GONE);
                 }
 
                 progressLayout.setVisibility(View.GONE);

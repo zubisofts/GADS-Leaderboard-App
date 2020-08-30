@@ -2,4 +2,18 @@
     <string name="app_name">GADS Leaderboard</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="submit">Submit</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="github_link_hint">Project on GITHUB (link)</string>
+    <string name="confirem">Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="successful">Successful</string>
+    <string name="loading">Loading...</string>
+    <string name="placeholder_name">Placeholder Name</string>
+    <string name="placeholder_details">233 learning hours, kenya.</string>
+    <string name="fetch_data_error">Unable to fetch data\n Tap to retry!</string>
 </resources>

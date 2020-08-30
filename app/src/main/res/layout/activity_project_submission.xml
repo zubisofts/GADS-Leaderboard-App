@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:background="#000">
+        android:background="@android:color/black">
 
         <ImageView
             android:layout_width="600dp"
@@ -49,7 +49,8 @@
                 android:src="@drawable/ic_arrow_back"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="16dp"
-                app:tint="@android:color/white" />
+                app:tint="@android:color/white"
+                android:layout_marginEnd="16dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -63,15 +64,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
-            android:text="Project Submission"
+            android:text="@string/project_submission"
             android:layout_marginTop="16dp"
-            android:textColor="#F69507"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#6C4B1B"
+            android:background="@color/accent_dim"
             android:layout_marginTop="8dp"
             android:layout_marginHorizontal="16dp" />
 
@@ -94,23 +95,25 @@
                     android:layout_weight="1"
                     android:id="@+id/edtFirstName"
                     android:inputType="text"
-                    android:hint="First Name"
+                    android:hint="@string/first_name"
                     android:background="@drawable/edit_text_bg"
                     android:padding="8dp"
                     android:textStyle="bold"
-                    android:layout_marginRight="4dp" />
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/edtLastName"
-                    android:hint="Last Name"
+                    android:hint="@string/last_name"
                     android:inputType="text"
                     android:textStyle="bold"
                     android:background="@drawable/edit_text_bg"
                     android:padding="8dp"
-                    android:layout_marginLeft="4dp" />
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp" />
 
             </LinearLayout>
 
@@ -119,32 +122,34 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edtEmail"
-                android:hint="Email Address"
+                android:hint="@string/email_address"
                 android:inputType="textEmailAddress"
                 android:background="@drawable/edit_text_bg"
                 android:padding="8dp"
                 android:layout_marginTop="40dp"
                 android:textStyle="bold"
-                android:layout_marginRight="4dp" />
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:id="@+id/edtLink"
-                android:hint="Project on GITHUB (link)"
+                android:hint="@string/github_link_hint"
                 android:inputType="text"
                 android:background="@drawable/edit_text_bg"
                 android:padding="8dp"
                 android:layout_marginTop="40dp"
                 android:textStyle="bold"
-                android:layout_marginRight="4dp" />
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnSubmit"
-                android:text="Submit"
+                android:text="@string/submit"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="60dp"
                 app:elevation="16dp"
@@ -154,7 +159,7 @@
                 android:textSize="18sp"
                 android:paddingHorizontal="32dp"
                 android:paddingVertical="16dp"
-                app:backgroundTint="#F69507" />
+                app:backgroundTint="@color/colorAccent" />
 
         </LinearLayout>
 

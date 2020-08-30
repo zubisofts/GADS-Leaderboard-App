@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="16dp"
-    app:cardElevation="8dp">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    app:cardElevation="3dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -30,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtName"
-                android:text="Pharis Muigai"
+                android:text="@string/placeholder_name"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -40,8 +41,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtDesc"
-                android:text="233 learning hours, kenya."
-                android:textColor="#504F4F"
+                android:text="@string/placeholder_details"
+                android:textColor="@color/textColorGrey"
                 android:layout_marginTop="8dp"
                 android:layout_gravity="center_vertical" />
 

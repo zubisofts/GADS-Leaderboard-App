@@ -17,11 +17,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you sure"
+        android:text="@string/confirem"
         android:textSize="18sp"
         android:textStyle="bold"
         android:id="@+id/text"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center" />
 
@@ -30,12 +30,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnConfirm"
-        android:text="Yes"
-        android:textColor="#FF9800"
+        android:text="@string/yes"
+        android:textColor="@color/colorAccent"
         android:textStyle="bold"
         app:cornerRadius="16dp"
         android:layout_marginTop="45dp"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        app:strokeColor="#FF9800" />
+        app:strokeColor="@color/colorAccent" />
 
 </LinearLayout>

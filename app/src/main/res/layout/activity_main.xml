@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    app:statusBarBackground="@android:color/black"
     tools:context=".activities.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,6 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:layout_scrollFlags="scroll"
             android:id="@+id/toolbar">
 
             <RelativeLayout
@@ -26,7 +28,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="LEADERBOARD"
+                    android:text="@string/leaderboard"
                     android:layout_centerVertical="true"
                     style="@style/TextAppearance.AppCompat.Title"
                     android:textStyle="bold"
@@ -36,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:id="@+id/btnSubmission"
-                    android:text="Submit"
+                    android:text="@string/submit"
                     android:textAllCaps="false"
                     app:backgroundTint="@android:color/white"
                     android:textColor="@android:color/black"
@@ -55,12 +57,13 @@
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/black"
             app:tabTextColor="@android:color/darker_gray"
-            app:tabBackground="@android:color/black"
             app:tabSelectedTextColor="@android:color/white"
             app:tabTextAppearance="@style/tabTextAppearance"
             app:tabIndicatorColor="@android:color/white"
             app:tabIndicatorHeight="5dp"
+            app:tabGravity="fill"
             android:id="@+id/tablayout" />
 
     </com.google.android.material.appbar.AppBarLayout>
