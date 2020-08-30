@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/btnClose"
+        android:layout_gravity="end"
+        android:src="@drawable/ic_close"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Are you sure"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/text"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnConfirm"
+        android:text="Yes"
+        android:textColor="#FF9800"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        android:layout_marginTop="45dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="#FF9800" />
+
+</LinearLayout>

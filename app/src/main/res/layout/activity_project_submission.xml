@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProjectSubmissionActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:background="#000">
+
+        <ImageView
+            android:layout_width="600dp"
+            android:layout_height="550dp"
+            android:layout_gravity="bottom|start"
+            android:src="@drawable/circle_bg"
+            android:translationX="-40dp"
+            android:translationY="300dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:src="@drawable/circle_bg"
+            android:translationX="-250dp"
+            android:translationY="-300dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="16dp"
+                app:tint="@android:color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo2" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:text="Project Submission"
+            android:layout_marginTop="16dp"
+            android:textColor="#F69507"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#6C4B1B"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="16dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/edtFirstName"
+                    android:inputType="text"
+                    android:hint="First Name"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="8dp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="4dp" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/edtLastName"
+                    android:hint="Last Name"
+                    android:inputType="text"
+                    android:textStyle="bold"
+                    android:background="@drawable/edit_text_bg"
+                    android:padding="8dp"
+                    android:layout_marginLeft="4dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/edtEmail"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edit_text_bg"
+                android:padding="8dp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:layout_marginRight="4dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/edtLink"
+                android:hint="Project on GITHUB (link)"
+                android:inputType="text"
+                android:background="@drawable/edit_text_bg"
+                android:padding="8dp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:layout_marginRight="4dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSubmit"
+                android:text="Submit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                app:elevation="16dp"
+                app:cornerRadius="32dp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="16dp"
+                app:backgroundTint="#F69507" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
