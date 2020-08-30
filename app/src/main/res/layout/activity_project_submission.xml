@@ -30,139 +30,151 @@
 
     </FrameLayout>
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnClose"
-                android:src="@drawable/ic_arrow_back"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="16dp"
-                app:tint="@android:color/white"
-                android:layout_marginEnd="16dp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/logo2" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:text="@string/project_submission"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/accent_dim"
-            android:layout_marginTop="8dp"
-            android:layout_marginHorizontal="16dp" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="100dp"
-            android:padding="16dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="40dp">
 
-                <EditText
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/edtFirstName"
-                    android:inputType="text"
-                    android:hint="@string/first_name"
-                    android:background="@drawable/edit_text_bg"
-                    android:padding="8dp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginEnd="4dp" />
+                    android:orientation="horizontal"
+                    android:padding="16dp">
 
-                <EditText
-                    android:layout_width="0dp"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnClose"
+                        android:src="@drawable/ic_arrow_back"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="16dp"
+                        app:tint="@android:color/white"
+                        android:layout_marginEnd="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo2" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/edtLastName"
-                    android:hint="@string/last_name"
-                    android:inputType="text"
+                    android:layout_gravity="center_horizontal"
                     android:textStyle="bold"
-                    android:background="@drawable/edit_text_bg"
-                    android:padding="8dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginStart="4dp" />
+                    android:text="@string/project_submission"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/accent_dim"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="16dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="100dp"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/edtFirstName"
+                            android:inputType="text"
+                            android:hint="@string/first_name"
+                            android:background="@drawable/edit_text_bg"
+                            android:padding="8dp"
+                            android:textStyle="bold"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:id="@+id/edtLastName"
+                            android:hint="@string/last_name"
+                            android:inputType="text"
+                            android:textStyle="bold"
+                            android:background="@drawable/edit_text_bg"
+                            android:padding="8dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginStart="4dp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/edtEmail"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/edit_text_bg"
+                        android:padding="8dp"
+                        android:layout_marginTop="40dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/edtLink"
+                        android:hint="@string/github_link_hint"
+                        android:inputType="text"
+                        android:background="@drawable/edit_text_bg"
+                        android:padding="8dp"
+                        android:layout_marginTop="40dp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnSubmit"
+                        android:text="@string/submit"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="60dp"
+                        app:elevation="16dp"
+                        app:cornerRadius="32dp"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingHorizontal="32dp"
+                        android:paddingVertical="16dp"
+                        app:backgroundTint="@color/colorAccent" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/edtEmail"
-                android:hint="@string/email_address"
-                android:inputType="textEmailAddress"
-                android:background="@drawable/edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:textStyle="bold"
-                android:layout_marginRight="4dp"
-                android:layout_marginEnd="4dp" />
+        </FrameLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:id="@+id/edtLink"
-                android:hint="@string/github_link_hint"
-                android:inputType="text"
-                android:background="@drawable/edit_text_bg"
-                android:padding="8dp"
-                android:layout_marginTop="40dp"
-                android:textStyle="bold"
-                android:layout_marginRight="4dp"
-                android:layout_marginEnd="4dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnSubmit"
-                android:text="@string/submit"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="60dp"
-                app:elevation="16dp"
-                app:cornerRadius="32dp"
-                android:textAllCaps="false"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:paddingHorizontal="32dp"
-                android:paddingVertical="16dp"
-                app:backgroundTint="@color/colorAccent" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
