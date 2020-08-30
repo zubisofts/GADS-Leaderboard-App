@@ -60,7 +60,7 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
             }
         });
 
-        leaderBoardViewModel.getProjectSubmitionResult().observe(this, new Observer<Boolean>() {
+        leaderBoardViewModel.getProjectSubmissionResult().observe(this, new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean successful) {
                 if (successful) {

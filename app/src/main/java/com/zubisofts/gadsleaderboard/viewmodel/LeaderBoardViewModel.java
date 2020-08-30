@@ -12,12 +12,12 @@ public class LeaderBoardViewModel extends ViewModel {
     private ApiRepository repository;
     private MutableLiveData<Response> leaderBordHour;
     private MutableLiveData<Response> leaderBordIQ;
-    private MutableLiveData<Boolean> projectSubmitionResult;
+    private MutableLiveData<Boolean> projectSubmissionResult;
 
     public LeaderBoardViewModel() {
         leaderBordHour = new MutableLiveData<>();
         leaderBordIQ = new MutableLiveData<>();
-        projectSubmitionResult = new MutableLiveData<>();
+        projectSubmissionResult = new MutableLiveData<>();
         repository = new ApiRepository();
     }
 
@@ -38,10 +38,10 @@ public class LeaderBoardViewModel extends ViewModel {
     }
 
     public void submitProject(String email, String lastName, String firstName, String link) {
-        repository.submitProject(email, lastName, firstName, link, projectSubmitionResult);
+        repository.submitProject(email, lastName, firstName, link, projectSubmissionResult);
     }
 
-    public MutableLiveData<Boolean> getProjectSubmitionResult() {
-        return projectSubmitionResult;
+    public MutableLiveData<Boolean> getProjectSubmissionResult() {
+        return projectSubmissionResult;
     }
 }
